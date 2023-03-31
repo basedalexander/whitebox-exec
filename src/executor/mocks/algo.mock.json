@@ -1,0 +1,45 @@
+{
+    "author": "0x8D60843A8B19c97375d1d67da1AC9049dDd807DC",
+    "name": "Exploration for weekends",
+    "description": "T",
+    "mdhash": "hashstring",
+    "md": {
+        "lang": "rust",
+        "version": "1.0",
+        "interface": {
+            "inputs": [
+                {
+                    "type": "parameterObj[]",
+                    "name": "parameters",
+                    "description": "json of parameters",
+                    "value": [
+                        {
+                            "name": "topics",
+                            "type": "string[]",
+                            "value": [],
+                            "description": "List of topics you are interested in"
+                        },
+                        {
+                            "name": "likesThreshold",
+                            "type": "number",
+                            "value": 500,
+                            "description": "threshold of likes for each tweet, below which ignore the posts"
+                        }
+                    ]
+                },
+                {
+                    "type": "obj[]",
+                    "name": "data",
+                    "description": "data to be passed"
+                }
+            ],
+            "output": [
+                {
+                    "type": "obj[]",
+                    "description": "List of posts"
+                }
+            ]
+        },
+        "code": "raw code string"
+    }
+}
