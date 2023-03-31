@@ -1,7 +1,10 @@
 const Executor = require('./executor/executor.js');
 const model = require('./executor/mocks/algo.mock.json');
 const publicationsResult = require('./executor/mocks/publications.mock.json');
+const codeMock = require('./executor/mocks/code.mock');
 
+// Settings up mocks
+model.md.code = codeMock;
 const params = [
     {
         "name": "topics",
@@ -19,5 +22,4 @@ async function main () {
     const result = await executor.execute(model, params, data);
     console.log(JSON.stringify(result, null, 4));
 }
-
 main();
