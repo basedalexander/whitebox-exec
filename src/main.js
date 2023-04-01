@@ -23,3 +23,8 @@ async function main () {
     console.log(JSON.stringify(result, null, 4));
 }
 main();
+
+// todo
+// 1. Implement risk0 rust code execution with proof and result (2hours)
+// 2. Call rust function from javascript using wasm-bindgen
+// 3. Use serialisation/desirealisation to pass complex object to host function.

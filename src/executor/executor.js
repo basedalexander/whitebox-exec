@@ -1,3 +1,5 @@
+const codeRunnerRegistry = require('./code-runner/index');
+
 class Executor {
     async execute(model, params, data) {
         const lang = model.md.lang;
@@ -16,20 +18,6 @@ class Executor {
     getCodeRunner(lang) {
         return codeRunnerRegistry[lang];
     }
-}
-
-class RustCodeRunner {
-    // initiate risk0 instance.
-    async run(code, params, data) {
-        return {
-            result: null,
-            proof: null
-        }
-    };
-}
-
-const codeRunnerRegistry = {
-    "rust": new RustCodeRunner()
 }
 
 module.exports = Executor;
