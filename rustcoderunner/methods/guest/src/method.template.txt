@@ -1,0 +1,15 @@
+#![no_main]
+// If you want to try std support, also update the guest Cargo.toml file
+#![no_std]  // std support is experimental
+use risc0_zkvm::guest::env;
+risc0_zkvm::guest::entry!(main);
+
+pub fn main() {
+    // const params - read one by one and construct params using env::read() and loops.
+    // const data - read one by one and construct data env::read().
+    let result = runner(params, data);
+    env::commit(&result);
+}
+
+// will be replaced with a rust function called "runner" fn runner(params, data) {...}
+{{}}
